@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -5,8 +6,8 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// replace with the URI the user provided
-const MONGO_URI = "mongodb+srv://mani:mani123@image-generator.x56ji.mongodb.net/?appName=Image-generator";
+// Mongo URI -- prefer environment variable
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://mani:mani123@image-generator.x56ji.mongodb.net/?appName=Image-generator";
 
 // middleware
 app.use(cors());
