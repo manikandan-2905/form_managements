@@ -7,8 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Mongo URI -- prefer environment variable
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://mani:mani123@image-generator.x56ji.mongodb.net/?appName=Image-generator";
-
+const MONGO_URI = process.env.MONGO_URI ;
 // middleware
 app.use(cors());
 app.use(express.json());
