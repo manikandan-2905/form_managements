@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+/* Global App Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+}
+
+/* Utility Classes */
+.w-100 {
+  width: 100%;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-md-0 {
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive container utilities */
+@media (max-width: 576px) {
+  .mx-3 {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mx-md-0 {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

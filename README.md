@@ -1,3 +1,46 @@
+# form
+
+This repository contains a React frontend and a simple Express/Mongoose backend. The backend connects to a MongoDB Atlas cluster and uses a `form` collection for storing data.
+
+## Backend Setup
+
+1. **Install dependencies**
+   ```bash
+   cd server
+   npm install
+   ```
+
+2. **Start the server**
+   - Development (watch mode):
+     ```bash
+     npm run server:dev
+     ```
+   - Production / single run:
+     ```bash
+     npm run server
+     ```
+   Both commands may be executed from the root directory since they are defined in the root `package.json`.
+
+3. **Database details**
+   The server uses this connection string by default:
+   ```js
+   const MONGO_URI = "mongodb+srv://mani:mani123@image-generator.x56ji.mongodb.net/?appName=Image-generator";
+   ```
+   When started successfully you will see:
+   ```text
+   Server listening on port 5001
+   ✅ MongoDB connected successfully
+   ```
+   Data sent via POST to `/api/form` is saved into the `form` collection (schema is untyped).
+
+4. **API endpoints**
+   - `GET /api/form` – retrieves all documents.
+   - `POST /api/form` – stores the posted JSON.
+
+The React app is already wired to use these endpoints; a proxy is configured to route `/api` requests to the backend during development.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
